@@ -12,7 +12,7 @@ const routes: Routes = [
     loadChildren: ()=> import('./public/pages/contactos/contactos.module').then(m => m.ContactosModule)
   },
   {
-    path: 'detalles-contactos',
+    path: 'agregarContactos',
     loadChildren: ()=> import('./public/pages/agregar-contactos/agregar-contactos.module').then(m => m.AgregarContactosModule)
   }
 ];
