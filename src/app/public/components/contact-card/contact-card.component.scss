@@ -17,7 +17,6 @@ body {
   background: linear-gradient(to right, #6A82FB, #FC5C7D);
   font-family: 'Poppins', sans-serif;
   width: 100%;
-  height:950px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,23 +31,28 @@ body {
 
 #conteiner{
   background: #fff;
+  justify-content: space-between;
+  transition: 40ms ease-in-out;
+  cursor: pointer;
   width: 30%;
   padding: 10px ;
-  border-radius: 10px;
+  border-radius: 100px;
   box-shadow: 0 0 6px 0 rgba(109, 50, 50, 0.8);
 }
 
 
 #telephoneNumber{
+  text-align: left;
   background: none;
   color:#000000;
   font-size: 25px;
   padding: 1px 1px 1px 50px;
-  display: block;
+  display: flex;
 }
 
 #grupo2{
   display: flex;
+ 
   justify-content: center;
   align-items: flex-end;
   #wp{
@@ -56,7 +60,15 @@ body {
   }
 }
 
+#right{
+  display: flex;
+  flex-direction: column;
+  
 
+  #wp{
+    height: 40px;
+  }
+}
 
 @media screen and (max-width:1100px){
   #conteiner{
