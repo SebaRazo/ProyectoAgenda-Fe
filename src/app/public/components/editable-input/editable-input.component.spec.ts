@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ContactosComponent } from './contactos.component';
+import { EditableInputComponent } from './editable-input.component';
 
-describe('ContactosComponent', () => {
-  let component: ContactosComponent;
-  let fixture: ComponentFixture<ContactosComponent>;
+describe('EditableInputComponent', () => {
+  let component: EditableInputComponent;
+  let fixture: ComponentFixture<EditableInputComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ContactosComponent ]
+      declarations: [ EditableInputComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ContactosComponent);
+    fixture = TestBed.createComponent(EditableInputComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

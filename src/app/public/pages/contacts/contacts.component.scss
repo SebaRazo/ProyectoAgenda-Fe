@@ -1,0 +1,17 @@
+@use './../../../../assets/styles/variables.scss';
+@use './../../../../assets/styles/buttons.scss';
+
+#container{
+  @include variables.limit-container;
+}
+
+#addContact{
+  font-size: larger;
+}
+
+
+
+main{
+  overflow-y: auto;
+  height: calc(100vh - 50px);
+}

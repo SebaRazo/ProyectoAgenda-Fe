@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoggedUserGuard } from './core/guards/logged-user.guard';
 
 const routes: Routes = [
   {
@@ -8,8 +9,9 @@ const routes: Routes = [
   
   },
   {
-    path: 'contactos',
-    loadChildren: ()=> import('./public/pages/contactos/contactos.module').then(m => m.ContactosModule)
+    path: 'contacs',
+    loadChildren: ()=> import('./public/pages/contacts/contacts.module').then(m => m.ContactsModule),
+    canActivate: [LoggedUserGuard]
   },
   {
     path: 'agregar-contactos',
