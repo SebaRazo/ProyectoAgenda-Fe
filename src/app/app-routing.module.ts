@@ -14,11 +14,8 @@ const routes: Routes = [
     canActivate: [LoggedUserGuard]
   },
   {
-<<<<<<< HEAD
-    path: 'agregar-contactos',
-=======
+
     path: 'agregarContactos',
->>>>>>> main
     loadChildren: ()=> import('./public/pages/agregar-contactos/agregar-contactos.module').then(m => m.AgregarContactosModule)
   },
   { path: 'registro', loadChildren: () => import('./public/pages/registro/registro.module').then(m => m.RegistroModule) },
