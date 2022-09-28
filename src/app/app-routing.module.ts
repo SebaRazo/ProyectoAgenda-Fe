@@ -16,7 +16,10 @@ const routes: Routes = [
   {
     path: 'agregar-contactos',
     loadChildren: ()=> import('./public/pages/agregar-contactos/agregar-contactos.module').then(m => m.AgregarContactosModule)
-  }
+  },
+  { path: 'registro', loadChildren: () => import('./public/pages/registro/registro.module').then(m => m.RegistroModule) },
+  { path: 'lista-negra', loadChildren: () => import('./public/pages/lista-negra/lista-negra.module').then(m => m.ListaNegraModule) },
+  { path: 'registro-de-llamadas', loadChildren: () => import('./public/pages/registro-de-llamadas/registro-de-llamadas.module').then(m => m.RegistroDeLlamadasModule) }
 ];
 
 @NgModule({
