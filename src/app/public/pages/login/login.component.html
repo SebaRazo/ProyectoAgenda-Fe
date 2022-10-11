@@ -1,5 +1,5 @@
 <body>      
-    <form action="">
+    <form (ngSubmit)="login(form)" #form="ngForm" action="">
         <div class="form">
             <h1>Agenda de Contactos</h1>
             <div class="grupo">
@@ -10,7 +10,7 @@
                 <input type="text" name="" id="" required><span class="barra"></span>
                 <label>Password</label>
             <button type="submit" id ="login"[routerLink]="['contacs']">Login</button>
-            <button type="submit" id ="registrar"[routerLink]="['registro']">registrar</button>
+            <button type="submit" id ="registrar"[routerLink]="['registro']">Registrar</button>
         </div>
       </div>
     </form>  
