@@ -1,13 +1,16 @@
-
-  
+  <body>
+    <video src="./../../../../assets/videos/panal.mp4" autoplay loop muted></video>
 <header>Lista de contactos <a href="agregarContactos" id = "right"><img id="wp" src="./../../../../assets/icons/agregar-usuario.png"></a>
   <a href="registro-de-llamadas" id = "right"><img id="wp" src="./../../../../assets/icons/registro-de-llamadas.png"></a>
   <a href="lista-negra" id = "right"><img id="wp" src="./../../../../assets/icons/lista-negra.png"></a>
 </header>
 <main id="container">
+  <div id="contenedorContacts">
   <app-contact-card
     *ngFor="let contact of contactsData"
     [contact]="contact"
     >
   </app-contact-card>
+  </div>
 </main>
+</body>

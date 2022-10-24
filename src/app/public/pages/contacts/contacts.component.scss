@@ -1,136 +1,48 @@
 @use './../../../../assets/styles/variables.scss';
 @use './../../../../assets/styles/buttons.scss';
 
-
-:root{
-  --colorTextos: #49454567;
+#contenedorContacts{overflow:scroll;
+  height:90vh;
 }
 
-*,
-::before,
-::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-header{
-  margin: 0px 0px;
-  padding: 0;
-  box-sizing: border-box;
-  text-align: center;
-  font-weight: 800;
-  background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);
-  background: linear-gradient(to right, #6A82FB, #FC5C7D);
-  font-family: 'Poppins', sans-serif;
-  font-size: 50px;
-}
+::-webkit-scrollbar {display: none;}
 
-body {
-  background: #FC5C7D;
-  background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);
-  background: linear-gradient(to right, #6A82FB, #FC5C7D);
-  font-family: 'Poppins', sans-serif;
-  width: 100%;
-  height:950px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-}
-
-
-
-form{
-  background: #fff;
-  width: 30%;
-  padding: 10px 0;
-  border-radius: 10px;
-  box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
-}
-
-.form{
-  width: 100%;
-  margin: auto;
-}
-
-form .grupo{
+header{margin: auto;
+  display: flexbox;
   position: relative;
-  margin: 45px;
+  text-align: center;
+  font-family:cursive;
+  font-style: italic;
+  font-size: 50px;
+  font-weight:900;
+  
+  color: #0e0500;
 }
-
-input, textarea{
-  background: none;
-  color:#c6c6c6;
-  font-size: 18px;
-  padding: 10px 10px 10px 5px;
-  display: block;
+video{
+  margin: auto;
+  display: flexbox;
+  position:absolute;
   width: 100%;
-  border:none;
-  border-bottom: 1px solid var(--colorTextos);
-  resize: none;
+  height: 100%;
+  overflow: hidden;
+  min-width: 100%;
+  min-height: 100%;
 }
 
-input:focus,textarea:focus{
-  outline: none;
-  color: rgb(94,93,93);
+body {display: flexbox;
+
+  background: rgb(5,2,68);
+  background: linear-gradient(0deg, rgba(5,2,68,0.9668242296918768) 0%, rgba(255,50,0,0.9444152661064426) 100%);
 }
-
-input:focus~label, 
-input:valid~label, 
-textarea:focus~label, textarea:valid~label{
-  position: absolute;
-  top: -14px;
-  font-size: 12px;
-  color: #2196F3;
-}
-
-label{
-  color: var(--colorTextos);
-  font-size: 16px;
-  position: absolute;
-  left: 5px;
-  top:10px;
-  transition: 0.5s ease all;
-  pointer-events: none;
-}
-
-
-input:focus~.barra::before, textarea:focus~.barra::before{
-  width: 100%;
-}
-
 
 #right{
 
   
 
   #wp{
+    
     height: 35px;
     width: 35px; ;
   }
 }
 
-
-@media screen and (max-width:1100px){
-  form{
-      width: 50%;
-  }
-}
-
-@media screen and (max-width:600px){
-  form{
-      width: 60%;
-  }
-}
-
-@media screen and (max-width:450px){
-  form{
-      width: 80%;
-  }
-}
-
-@media screen and (max-width:300px){
-  form{
-      width: 90%;
-  }
-}

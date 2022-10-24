@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Contact, ContactJsonPlaceholder, defaultContact } from 'src/app/core/interfaces/contacts';
+import { MatDialog } from '@angular/material/dialog';
+import { PopUpComponent } from 'src/app/public/components/pop-up/pop-up.component'
 
 @Component({
   selector: 'app-contact-card',
@@ -8,7 +10,15 @@ import { Contact, ContactJsonPlaceholder, defaultContact } from 'src/app/core/in
 })
 export class ContactCardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialogRef : MatDialog){}
+  openDialog(){
+    this.dialogRef.open(PopUpComponent,{
+      data : {
+        name : 'Samuel'
+      }
+    });
+  }
+
 
   @Input() contact:ContactJsonPlaceholder = {};
 
