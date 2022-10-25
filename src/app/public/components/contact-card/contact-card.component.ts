@@ -10,14 +10,10 @@ import { PopUpComponent } from 'src/app/public/components/pop-up/pop-up.componen
 })
 export class ContactCardComponent implements OnInit {
 
-  constructor(private dialogRef : MatDialog){}
-  openDialog(){
-    this.dialogRef.open(PopUpComponent,{
-      data : {
-        name : 'Samuel'
-      }
-    });
-  }
+  emergente:boolean = false;
+
+  constructor(){}
+
 
 
   @Input() contact:ContactJsonPlaceholder = {};

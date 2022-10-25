@@ -1,20 +1,18 @@
 import { Component, Inject, Input, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Contact, ContactJsonPlaceholder, defaultContact } from 'src/app/core/interfaces/contacts';
-
+import {ContactCardComponent} from 'src/app/public/components/contact-card/contact-card.component'
 @Component({
   selector: 'app-pop-up',
   templateUrl: './pop-up.component.html',
   styleUrls: ['./pop-up.component.scss']
 })
 export class PopUpComponent implements OnInit {
-  firstName;
-  constructor(@Inject(MAT_DIALOG_DATA) public data) {this.firstName = data.name }
+  emergente:boolean = false;
+  constructor(){}
 
   @Input() contact:ContactJsonPlaceholder = {};
 
-
   ngOnInit(): void {
   }
-
+  
 }

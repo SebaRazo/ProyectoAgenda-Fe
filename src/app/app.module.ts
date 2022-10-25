@@ -10,7 +10,6 @@ import { PopUpComponent } from './public/components/pop-up/pop-up.component';
 @NgModule({
   declarations: [
     AppComponent,
-    PopUpComponent,
   ],
   imports: [
     BrowserModule,

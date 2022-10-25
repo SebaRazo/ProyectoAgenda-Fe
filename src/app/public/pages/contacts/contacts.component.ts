@@ -9,7 +9,7 @@ import { contactsData } from 'src/assets/mockData/data';
   styleUrls: ['./contacts.component.scss']
 })
 export class ContactsComponent implements OnInit {
-
+  emergente:boolean = false;
   contactsData:ContactJsonPlaceholder[] = [];
 
   constructor(private us:UserService) { }
