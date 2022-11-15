@@ -1,6 +1,8 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoggedUserGuard } from './core/guards/logged-user.guard';
+import { ContactsComponent } from './public/pages/contacts/contacts.component';
 
 const routes: Routes = [
   {
@@ -13,6 +15,9 @@ const routes: Routes = [
     loadChildren: ()=> import('./public/pages/contacts/contacts.module').then(m => m.ContactsModule),
     canActivate: [LoggedUserGuard]
   },
+  { path:'ContactsComponent', component: ContactsComponent },
+
+
   {
 
     path: 'agregarContactos',
@@ -28,3 +33,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+imports:[HttpClientModule  ]

@@ -9,14 +9,17 @@ import { PopUpComponent } from '../../components/pop-up/pop-up.component';
 
 @NgModule({
   declarations: [
+    
     ContactsComponent,
-    ContactCardComponent,
+    
     PopUpComponent,
+    ContactCardComponent
 
   ],
   imports: [
     CommonModule,
-    ContactsRoutingModule
-  ]
+    ContactsRoutingModule,
+  
+  ],
 })
 export class ContactsModule { }

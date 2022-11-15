@@ -4,11 +4,9 @@
         
         <div id="form" >
             <div id="grupo"><button id= "button-emergente" class="btn btn-primary" (click)="emergente = true" (dblclick)="emergente = false">
-                <p id="name" [routerLink]="['contacts',contact.id]">{{contact.username}} {{contact.company?.name}}</p>
-                <span id="telephoneNumber">{{contact.phone}} </span>  
-                    
+                <p id="name" [routerLink]="['contacts',contact.id]">{{contact.Nombre}} {{contact.Apellido}}</p>
+                <span id="telephoneNumber">{{contact.NumbCelular}}</span> 
                   </button>
-                
             </div>
             
             
@@ -16,4 +14,4 @@
         
     </div>
   
-    <app-pop-up *ngIf="emergente" [contact]="contact" ></app-pop-up>
+    <app-pop-up *ngIf="emergente" ></app-pop-up>
