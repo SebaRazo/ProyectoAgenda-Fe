@@ -13,9 +13,9 @@ export const defaultContact:Contact = {
 
 export interface ContactJsonPlaceholder {
     id?: number;
-    Nombre?: string;
-    Apellido?: string;
+    nombre?: string;
+    apellido?: string;
     userName?: string;
-    NumbCelular?: string;
+    celular?: string;
 
 }

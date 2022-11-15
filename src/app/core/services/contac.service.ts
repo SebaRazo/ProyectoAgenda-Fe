@@ -16,7 +16,7 @@ export class ContactService {
   }
 
   async getContacts(): Promise<ContactJsonPlaceholder[]> {
-    const data = await fetch('https://jsonplaceholder.typicode.com/users');
+    const data = await fetch('https://localhost:7237/api/Contacto');
     return await data.json();
   }
 
@@ -26,6 +26,7 @@ export class ContactService {
       method: 'PUT',
       headers: {
         'Content-type': 'application/json',
+        'Authentication' : this.Admin.getSession().token!
       },
       body: JSON.stringify(contact),
     });

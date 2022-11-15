@@ -9,9 +9,9 @@ import {ContactCardComponent} from 'src/app/public/components/contact-card/conta
 export class PopUpComponent implements OnInit {
   emergente:boolean = false;
   constructor(){}
-
-
   @Input() contact:ContactJsonPlaceholder = {};
+
+
   ngOnInit(): void {
   }
   
