@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactJsonPlaceholder } from 'src/app/core/interfaces/contacts';
-import { AdminService } from 'src/app/core/services/admin.service';
 import { ContactService } from 'src/app/core/services/contac.service';
 import { NgModule } from '@angular/core';
 import {ContactCardComponent} from '../../components/contact-card/contact-card.component';
-
+import { AuthService } from 'src/app/core/services/auth.service';
 @Component({
   selector: 'app-contacts',
   templateUrl: './contacts.component.html',
@@ -14,7 +13,7 @@ export class ContactsComponent implements OnInit {
   emergente:boolean = false;
   contactsData:ContactJsonPlaceholder[] = [];
 
-  constructor(private cs:ContactService, private admin:AdminService) { }
+  constructor(private cs:ContactService, private auth:AuthService) { }
 
   ngOnInit(): void {
     this.getData()
@@ -25,6 +24,8 @@ export class ContactsComponent implements OnInit {
   }
 
   logOut(){
-    this.admin.resetSession();
+    this.auth.resetSession();
+
+
 
 }}

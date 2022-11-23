@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
 import { BACKEND_URL } from '../constants/backend';
 import { ContactJsonPlaceholder } from '../interfaces/contacts';
-import { AdminService } from './admin.service';
-
+import { AuthService } from './auth.service';
 @Injectable({
   providedIn: 'root',
 })
 export class ContactService {
-  constructor(private Admin:AdminService) {}
+  constructor(private auth:AuthService) {}
 
   async getContactDetails(id: number): Promise<ContactJsonPlaceholder> {
     const jsonData = await this.getContacts();
@@ -16,7 +15,7 @@ export class ContactService {
   }
 
   async getContacts(): Promise<ContactJsonPlaceholder[]> {
-    const data = await fetch('https://localhost:7237/api/Contacto');
+    const data = await fetch('https://localhost:7018/api/Contact');
     return await data.json();
   }
 
@@ -26,7 +25,7 @@ export class ContactService {
       method: 'PUT',
       headers: {
         'Content-type': 'application/json',
-        'Authentication' : this.Admin.getSession().token!
+        
       },
       body: JSON.stringify(contact),
     });
@@ -47,10 +46,10 @@ export class ContactService {
 
   async deleteContact(id:number):Promise<boolean>{
     const res = await fetch(BACKEND_URL+'/api/Contact'+id, {
-      method: 'POST',
+      method: 'DELET',
       headers: {
         'Content-type': 'application/json',
-        'Authentication' : this.Admin.getSession().token!
+        'Authentication' : this.auth.getSession().token!
       },
     });
     return res.ok;

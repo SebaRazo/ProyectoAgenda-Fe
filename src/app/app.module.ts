@@ -5,9 +5,10 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
-import { SharedModule } from './core/shared/shared.module';
+
 import { ContactCardComponent } from './public/components/contact-card/contact-card.component';
 import { ContactsModule } from './public/pages/contacts/contacts.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -17,8 +18,8 @@ import { ContactsModule } from './public/pages/contacts/contacts.module';
     AppComponent,
   ],
   imports: [
-    
-    SharedModule,
+    ReactiveFormsModule,
+
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

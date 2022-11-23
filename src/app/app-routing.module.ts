@@ -13,7 +13,7 @@ const routes: Routes = [
   {
     path: 'contacs',
     loadChildren: ()=> import('./public/pages/contacts/contacts.module').then(m => m.ContactsModule),
-    canActivate: [LoggedUserGuard]
+    canActivate: [LoggedUserGuard],
   },
   { path:'ContactsComponent', component: ContactsComponent },
 

@@ -1,10 +1,10 @@
 <div id = "conteiner">
     <div id="grupo2">
-    <p id="name" [routerLink]="['contacts',contact.id]">{{contact.nombre}} {{contact.apellido}}</p>
-    <span id="telephoneNumber">{{contact.celular}}</span>
+    <p id="name" [routerLink]="['contacts',contact.id]">{{contact.Name}} {{contact.Description}}</p>
+    <span id="telephoneNumber">{{contact.CelularNumber}} {{contact.TelephoneNumber}}</span>
     <div>
-    <a href="https://wa.me/{{contact.celular}}" target="_blank" id = "right"><img id="wp" src="./../../../../assets/icons/whatsapp.png"></a>
-    <a href="tel:{{contact.celular}}" id = "right"><img id="wp" src="./../../../../assets/icons/llamada-telefonica.png"></a>
+    <a href="https://wa.me/{{contact.CelularNumber}}" target="_blank" id = "right"><img id="wp" src="./../../../../assets/icons/whatsapp.png"></a>
+    <a href="tel:{{contact.CelularNumber}}" id = "right"><img id="wp" src="./../../../../assets/icons/llamada-telefonica.png"></a>
     <a href="lista-negra" id = "right"><img id="wp" src="./../../../../assets/icons/bloquear-usuario.png"></a>
     <a href="." id = "right"><img id="wp" src="./../../../../assets/icons/eliminar-usuario.png"></a>
     <a href="." id = "right"><img id="wp" src="./../../../../assets/icons/edit.png"></a> 

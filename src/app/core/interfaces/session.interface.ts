@@ -1,4 +1,4 @@
-import { IUser } from "./usuario.interface";
+import { IUser } from "./user.interface";
 
 export interface ISession{
   expiresIn: string;
