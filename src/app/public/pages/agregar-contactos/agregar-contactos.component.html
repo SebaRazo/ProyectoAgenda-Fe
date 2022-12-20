@@ -1,23 +1,27 @@
 <body>
     <video src="./../../../../assets/videos/agre.mp4" type="video/mp4" playsinline loop autoplay [muted]="true"></video> 
       
-    <form action="">
+    <form (ngSubmit)="AgregContactos(createForm)" #createForm="ngForm">
         <div class="form">
             <h1>Nuevo Contacto</h1>
             <div class="grupo">
-                <input type="text" name="" id="" required><span class="barra"></span>
-                <label>Nombre</label>
+                <input type="text" name="name" id="" required [(ngModel)]="contactsData.name" #name="ngModel"><span class="barra"></span>
+                <label>name</label>
             </div>
             <div class="grupo">
-                <input type="text" name="" id="" required ><span class="barra"></span>
-                <label>Apellido</label>
+                <input type="text" name="Description" id=""  [(ngModel)]="contactsData.description" #Description="ngModel"><span class="barra"></span>
+                <label>Description</label>
             </div>
             <div class="grupo">
-              <input type="text" id="" required><span class="barra"></span>
-              <label>Celular</label>
+              <input type="text" name="celularNumber" id=""  [(ngModel)]="contactsData.celularNumber" #celularNumber="ngModel"><span class="barra"></span>
+              <label>celularNumber</label>
           </div>
-            <button  type="submit" [routerLink]="['contacs']">Agregar</button>
-            <a href='contacs' id = "right"><img id="wp" src="./../../../../assets/icons/anterior.png"></a>
+          <div class="grupo">
+            <input type="text" name="telephoneNumber" id="" [(ngModel)]="contactsData.telephoneNumber" #telephoneNumber="ngModel" ><span class="barra"></span>
+            <label>telephoneNumber</label>
+        </div>
+            <button  type="submit" >Agregar</button>
+          >
             
             
         </div>

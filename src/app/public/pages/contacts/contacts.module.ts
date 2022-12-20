@@ -5,21 +5,28 @@ import { ContactsRoutingModule } from './contacts-routing.module';
 import { ContactsComponent } from './contacts.component';
 import { ContactCardComponent } from '../../components/contact-card/contact-card.component';
 import { PopUpComponent } from '../../components/pop-up/pop-up.component';
+import { FormsModule } from '@angular/forms';
+import { ListaNegraModule } from '../lista-negra/lista-negra.module';
+
 
 
 @NgModule({
   declarations: [
     
     ContactsComponent,
-    
     PopUpComponent,
-    ContactCardComponent
+    ContactCardComponent,
+    
+
 
   ],
   imports: [
     CommonModule,
     ContactsRoutingModule,
-  
+    FormsModule,
+
+    
   ],
+  
 })
 export class ContactsModule { }

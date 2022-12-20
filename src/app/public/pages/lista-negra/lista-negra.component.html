@@ -1,8 +1,17 @@
-
-
-<body> 
-    <video src="./../../../../assets/videos/listanegra.mp4" type="video/mp4" playsinline loop autoplay [muted]="true"></video> 
-    <header><a href='contacs' id = "right"><img id="wp" src="./../../../../assets/icons/anterior.png"></a>Lista-negra works!</header>
+<body>
+  <video src="./../../../../assets/videos/panal.mp4" type="video/mp4" playsinline loop autoplay [muted]="true"></video>
+<header>Lista de contactos <button [routerLink]="['/agregarContactos']"  id = "right"><img id="wp" src="./../../../../assets/icons/agregar-usuario.png"></button>
+<button [routerLink]="['/registro-de-llamadas']" id = "right"><img id="wp" src="./../../../../assets/icons/registro-de-llamadas.png"></button>
+<button [routerLink]="['/lista-negra']" id = "right"><img id="wp" src="./../../../../assets/icons/lista-negra.png"></button>
+<button [routerLink]="['/']" id = "drt">Salir</button>
+</header>
+<main id="container">
+<div id="contenedorContacts">
+  <app-ct-black
+  *ngFor="let contact of contactsData"
+  [contact]="contact"
+  >
+  </app-ct-black>
+</div>
+</main>
 </body>
-
-

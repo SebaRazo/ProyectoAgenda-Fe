@@ -29,11 +29,27 @@ video{
   min-height: 100%;
 }
 
+button{ background: transparent;
+border-color: transparent;
+height: 35px;
+width: 35px;}
+
 body {display: flexbox;
 
   background: rgb(5,2,68);
   background: linear-gradient(0deg, rgba(5,2,68,0.9668242296918768) 0%, rgba(255,50,0,0.9444152661064426) 100%);
 }
+#drt{  margin: auto;
+  display: flexbox;
+  position: relative;
+  text-align: center;
+  font-family:cursive;
+  font-style: italic;
+  font-size: 25px;
+  font-weight:900;
+  
+  color: #0e0500}
+
 
 #right{
 

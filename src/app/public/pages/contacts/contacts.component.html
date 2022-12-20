@@ -1,8 +1,9 @@
   <body>
     <video src="./../../../../assets/videos/panal.mp4" type="video/mp4" playsinline loop autoplay [muted]="true"></video>
-<header>Lista de contactos <a href="agregarContactos" id = "right"><img id="wp" src="./../../../../assets/icons/agregar-usuario.png"></a>
-  <a href="registro-de-llamadas" id = "right"><img id="wp" src="./../../../../assets/icons/registro-de-llamadas.png"></a>
-  <a href="lista-negra" id = "right"><img id="wp" src="./../../../../assets/icons/lista-negra.png"></a>
+<header>Lista de contactos <button [routerLink]="['/agregarContactos']"  id = "right"><img id="wp" src="./../../../../assets/icons/agregar-usuario.png"></button>
+  <button [routerLink]="['/registro-de-llamadas']" id = "right"><img id="wp" src="./../../../../assets/icons/registro-de-llamadas.png"></button>
+  <button [routerLink]="['/lista-negra']" id = "right"><img id="wp" src="./../../../../assets/icons/lista-negra.png"></button>
+  <button [routerLink]="['/']" id = "drt">Salir</button>
 </header>
 <main id="container">
   <div id="contenedorContacts">

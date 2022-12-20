@@ -1,17 +1,16 @@
-import { Component, Inject, Input, OnInit } from '@angular/core';
-import { ContactService } from 'src/app/core/services/contac.service';
-
-import { Contact, ContactJsonPlaceholder } from 'src/app/core/interfaces/contacts';
-import {ContactCardComponent} from 'src/app/public/components/contact-card/contact-card.component'
-import { AuthService } from 'src/app/core/services/auth.service';
-import { ContactsComponent } from '../../pages/contacts/contacts.component';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ContactJsonPlaceholder } from 'src/app/core/interfaces/contacts';
+import { AuthService } from 'src/app/core/services/auth.service';
+import { ContactService } from 'src/app/core/services/contac.service';
+import { ContactsComponent } from '../../pages/contacts/contacts.component';
+
 @Component({
-  selector: 'app-pop-up',
-  templateUrl: './pop-up.component.html',
-  styleUrls: ['./pop-up.component.scss']
+  selector:'app-emr-black',
+  templateUrl: './emr-black.component.html',
+  styleUrls: ['./emr-black.component.scss']
 })
-export class PopUpComponent implements OnInit {
+export class EmrBlackComponent implements OnInit {
   emergente:boolean = false;
   constructor( private cs:ContactService, private cc:ContactsComponent, private auth:AuthService, private router:Router) { }
 
@@ -43,4 +42,3 @@ export class PopUpComponent implements OnInit {
 
   
 }
-

@@ -1,3 +1,5 @@
+@use './../../../../assets/styles/variables.scss';
+@use './../../../../assets/styles/buttons.scss';
 
 header{margin: auto;
   display: flexbox;
@@ -8,9 +10,14 @@ header{margin: auto;
   font-size: 50px;
   font-weight:900;
   
-  color: #ffffff;
+  color: #f5f2f1;
 }
-  
+
+#contenedorContacts{overflow:scroll;
+  height:90vh;
+}
+::-webkit-scrollbar {display: none;}
+
 video{
   margin: auto;
   display: flexbox;
@@ -31,14 +38,30 @@ body {display: flexbox;
   
  
   
-  #right{
+#right{
+
   
+
+  #wp{
     
-  
-    #wp{
-      height: 35px;
-      width: 35px; ;
-    }
+    height: 35px;
+    width: 35px; ;
   }
+}
+
   
-  
+  button{ background: transparent;
+    border-color: transparent;
+    height: 35px;
+    width: 35px;}
+
+    #drt{  margin: auto;
+      display: flexbox;
+      position: relative;
+      text-align: center;
+      font-family:cursive;
+      font-style: italic;
+      font-size: 25px;
+      font-weight:900;
+      
+      color: #0e0500}

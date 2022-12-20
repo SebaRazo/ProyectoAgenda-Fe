@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { iAuthRequest } from 'src/app/core/interfaces/auth';
 import { AuthService } from 'src/app/core/services/auth.service';
+import { AppModule } from 'src/app/app.module';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,7 @@ export class LoginComponent {
 
   constructor(private auth:AuthService, private router:Router) { }
 
-  //Hecho usando NgModel
+
   authData:iAuthRequest = {
     userName : "",
     password : ""
@@ -21,10 +22,9 @@ export class LoginComponent {
 
 
   async login(form:NgForm){
-    //Valor del formulario para no usar NgModel
     console.log(form.value);
     const token = await this.auth.login(form.value);
-    if(token) this.router.navigate(['contacs']);
+    if(token) this.router.navigate(['contacts']);
   }
 
 }

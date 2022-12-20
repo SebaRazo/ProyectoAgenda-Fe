@@ -9,11 +9,11 @@
                 <label>Nombre de usuario:</label>
             </div>
             <div class="grupo">
-                <input type="text" name="password" id="" [(ngModel)]="authData.password" #password="ngModel"
+                <input type="password" name="password" id="" [(ngModel)]="authData.password" #password="ngModel"
                 >><span class="barra"></span>
                 <label>Password:</label>
             <button type="submit" id ="login" >Login</button>
-            <button type="submit" id ="registrar"[routerLink]="['registro']">registrar</button>
+            <button type="button" id ="registrar" [routerLink]="['registro']">registrar</button>
         </div>
       </div>
     </form>  

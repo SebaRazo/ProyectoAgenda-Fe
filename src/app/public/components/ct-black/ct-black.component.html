@@ -3,7 +3,7 @@
         
         
         <div id="form" >
-            <div id="grupo"><button id= "button-emergente" class="btn btn-primary" (click)="emergente = true" (dblclick)="emergente = false">
+            <div id="grupo"><button id= "button-emergente" class="btn btn-primary"  (dblclick)="deleteContacto(contact.id)">
                 <p id="name" >{{contact.name}} {{contact.description}}</p>
                 
                   </button>
@@ -13,6 +13,3 @@
         </div>
         
     </div>
-  
-    <app-pop-up *ngIf="emergente"     
-    [contact]="contact"></app-pop-up>

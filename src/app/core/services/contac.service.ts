@@ -1,57 +1,91 @@
 import { Injectable } from '@angular/core';
 import { BACKEND_URL } from '../constants/backend';
-import { ContactJsonPlaceholder } from '../interfaces/contacts';
+import { Contact, ContactJsonPlaceholder } from '../interfaces/contacts';
 import { AuthService } from './auth.service';
+
+
 @Injectable({
   providedIn: 'root',
 })
 export class ContactService {
   constructor(private auth:AuthService) {}
 
-  async getContactDetails(id: number): Promise<ContactJsonPlaceholder> {
-    const jsonData = await this.getContacts();
-    const contact = jsonData.filter((contact) => contact.id == id);
-    return contact.length > 0 ? contact[0] : {};
-  }
 
-  async getContacts(): Promise<ContactJsonPlaceholder[]> {
-    const data = await fetch('https://localhost:7018/api/Contact');
-    return await data.json();
-  }
-
-  async editContact(contact: ContactJsonPlaceholder) {
-    console.log('Enviando edit de usuario a la api');
-    const res = await fetch(BACKEND_URL+'/api/Contact', {
-      method: 'PUT',
+  async getContactDetails(id: number): Promise<Contact> {
+    const res = await fetch(BACKEND_URL+'/api/Contact/'+ id,{
+      method: 'GET',
       headers: {
         'Content-type': 'application/json',
-        
+        'Authorization' :  `Bearer ${this.auth.getSession().token!}` ////******************* */
       },
-      body: JSON.stringify(contact),
     });
     return await res.json();
   }
 
-  async addContact(contact: ContactJsonPlaceholder){
-    console.log('Enviando edit de usuario a la api');
+  async getContacts(): Promise<ContactJsonPlaceholder[]> {
+    const data = await fetch(BACKEND_URL+'/api/Contact',{
+      method: 'GET',
+      headers: {
+        'Content-type': 'application/json',
+        'Authorization' :  `Bearer ${this.auth.getSession().token!}` ////******************* */
+      },
+    });
+    return await data.json();
+  }
+
+  async editContact(contact:Contact) {
+    const res = await fetch(BACKEND_URL+'/api/Contact/' +contact.id, {
+      method: 'PUT',
+      body: JSON.stringify(contact),
+      headers: {
+        'Content-type': 'application/json',
+        'Authorization' :  `Bearer ${this.auth.getSession().token!}`
+      },
+      
+    });
+    return res.ok;
+  }
+
+  async addContact(contact: ContactJsonPlaceholder) : Promise<ContactJsonPlaceholder>{ //: Promise<ContactJsonPlaceholder>
+    console.log(contact);
     const res = await fetch(BACKEND_URL+'/api/Contact', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
+        'Authorization' :  `Bearer ${this.auth.getSession().token!}`
       },
-      body: JSON.stringify(contact),
+      body: JSON.stringify(contact)
     });
     return await res.json();
+    //console.log(res.json())
   }
 
+
+
   async deleteContact(id:number):Promise<boolean>{
-    const res = await fetch(BACKEND_URL+'/api/Contact'+id, {
-      method: 'DELET',
+    const res = await fetch(BACKEND_URL+'/api/Contact/'+id, {
+      method: 'DELETE',
       headers: {
         'Content-type': 'application/json',
-        'Authentication' : this.auth.getSession().token!
+        'Authorization' :  `Bearer ${this.auth.getSession().token!}`
       },
     });
     return res.ok;
+  }
+
+
+  async addContactblack(id: Contact, name:Contact, celularNumber: Contact, 
+    description: Contact, telephoneNumber: Contact) : Promise<ContactJsonPlaceholder>{ //: Promise<ContactJsonPlaceholder>
+    console.log(id, name, celularNumber, description, telephoneNumber);
+    const res = await fetch(BACKEND_URL+'/api/Contact', {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json',
+        'Authorization' :  `Bearer ${this.auth.getSession().token!}`
+      },
+      body: JSON.stringify(id)
+    });
+    return await res.json();
+    //console.log(res.json())
   }
 }

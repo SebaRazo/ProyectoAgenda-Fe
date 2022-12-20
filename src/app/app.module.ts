@@ -2,13 +2,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatDialogModule } from '@angular/material/dialog';
+import { CommonModule } from '@angular/common';
+import { EditContactComponent } from './public/pages/edit-contact/edit-contact.component';
+import { EditContactModule } from './public/pages/edit-contact/edit-contact.module';
 import { HttpClientModule } from '@angular/common/http';
-
+import { AgregarContactosModule } from './public/pages/agregar-contactos/agregar-contactos.module';
+import { PopUpComponent } from './public/components/pop-up/pop-up.component';
 import { ContactCardComponent } from './public/components/contact-card/contact-card.component';
-import { ContactsModule } from './public/pages/contacts/contacts.module';
-import { ReactiveFormsModule } from '@angular/forms';
+
+
+
 
 
 
@@ -16,18 +19,20 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [
     
     AppComponent,
+         
+   
+
+    
+
   ],
   imports: [
-    ReactiveFormsModule,
-
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    MatDialogModule,
-    HttpClientModule  
+    HttpClientModule,
+    
   ],
 
-  
+
   providers: [],
   bootstrap: [AppComponent]
 })

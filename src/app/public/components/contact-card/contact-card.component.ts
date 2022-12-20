@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Contact, ContactJsonPlaceholder, defaultContact } from 'src/app/core/interfaces/contacts';
+import { Contact, ContactJsonPlaceholder } from 'src/app/core/interfaces/contacts';
 import { ContactService } from 'src/app/core/services/contac.service';
 
 @Component({
@@ -13,15 +13,20 @@ export class ContactCardComponent implements OnInit {
 
   constructor(private cs:ContactService,) { }
 
-  @Input() contact:ContactJsonPlaceholder = {};
+  @Input() contact:ContactJsonPlaceholder = {
+    id:0,
+    name:'',
+    celularNumber:0,
+    description:'',
+    telephoneNumber:0,
+
+
+  };
   
 
   ngOnInit(): void {
-    this.getData()
+    
   }
 
-  async getData(){
-    this.contactsData = await this.cs.getContacts();
-  }
 
 }

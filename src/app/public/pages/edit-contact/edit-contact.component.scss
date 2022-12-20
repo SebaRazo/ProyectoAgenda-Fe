@@ -1,0 +1,138 @@
+video{
+    margin: auto;
+    display: flexbox;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+body {display: flexbox;
+    
+
+    background: url("./../../../../assets/imagen/vec.jpg");
+
+    
+}
+
+
+h1{ 
+    font-family: cursive;
+    font-style: italic;
+    color:rgba(251, 248, 248, 0.64); 
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 800;
+}
+
+form{
+    display: block;
+    position: fixed;
+    left: 35%;
+    top: 35%;
+    background: rgba(2, 26, 71, 0.67);
+    width: 30%;
+    padding: 10px 10px 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 6px 0 rgba(209, 8, 8, 0.523);
+}
+
+.form{
+   
+    width: 100%;
+    margin: auto;
+}
+
+form .grupo{
+    position: relative;
+    margin: 45px;
+}
+
+input, textarea{
+    font-family: monospace;
+    background: none;
+    color:#fffbfb;
+    font-size: 20px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border:none;
+    border-bottom: 1px solid var(--colorTextos);
+    resize: none;
+}
+
+input:focus,textarea:focus{
+    font-family: monospace;
+    outline: none;
+    color: rgb(229, 12, 12);
+}
+
+input:focus~label, 
+input:valid~label, 
+textarea:focus~label, textarea:valid~label{
+    font-family: monospace;
+    position: absolute;
+    top: -14px;
+    font-size: 17px;
+    color: #f36721ce;
+}
+
+label{
+    font-family: monospace;
+    color:rgba(251, 248, 248, 0.64); 
+    font-size: 20px;
+    position: absolute;
+    left: 5px;
+    top:10px;
+    transition: 0.5s ease all;
+    pointer-events: none;
+}
+
+
+input:focus~.barra::before, textarea:focus~.barra::before{
+    width: 100%;
+}
+.barra{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.barra::before{
+    content: '';
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, #6A82FB, #FC5C7D);
+    transition: 0.3s ease all;
+    left: 0%;
+}
+button{
+    background: #FC5C7D;
+    
+    background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);
+  
+    background: linear-gradient(to right, #6A82FB, #FC5C7D);
+
+    display: block;
+    width: 100px;
+    height: 40px;
+    border:none;
+    color:#fff; 
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+#right{
+  
+    
+  
+    #wp{
+      height: 35px;
+      width: 35px; ;
+    }
+  }
