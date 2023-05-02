@@ -20,9 +20,9 @@ export class AgregarContactosComponent implements OnInit {
   constructor(private cs : ContactService, private router:Router, private ar:ActivatedRoute) { }  //private Cc: ContactCardComponent
 
   contactsData:ContactJsonPlaceholder = {
-    name: '',
+    name: "",
     celularNumber: 0,
-    description: '',
+    description: "",
     telephoneNumber: 0,
   };
   ngOnInit(): void {

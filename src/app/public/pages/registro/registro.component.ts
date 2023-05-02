@@ -16,7 +16,7 @@ export class RegistroComponent {
 
   constructor(private auth:AuthService, private router:Router) { }
 
-  //Hecho usando NgModel
+ 
   user:iRegisterRequest = {
     name:"",
     lastName:"",

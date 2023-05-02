@@ -4,7 +4,7 @@ import { BACKEND_URL } from '../constants/backend';
 import { iAuthRequest, iRegisterRequest } from '../interfaces/auth';
 import { ISession } from '../interfaces/session.interface';
 
-import { JwtHelperService } from '@auth0/angular-jwt'; //npm install @auth0/angular-jwt
+import { JwtHelperService } from '@auth0/angular-jwt'; 
 import { IUser } from '../interfaces/user.interface';
 
 @Injectable({
@@ -28,15 +28,15 @@ export class AuthService {
     const helper = new JwtHelperService();
     const decodedToken = helper.decodeToken(token);
     const sub = decodedToken.sub;
-    console.log(sub); ///busca el id del usuario
+    console.log(sub); 
 
     if (!token) return false;
     this.setSession(token);
-    this.setUserId(sub); //guarda el id en el local storage
+    this.setUserId(sub); 
     return true;
   }
 
-  async addUser(user: IUser) {  //: Promise<ContactJsonPlaceholder>
+  async addUser(user: IUser) {  
     const res = await fetch(BACKEND_URL+'/api/User', {
       method: 'POST',
       headers: { 'Content-type': 'application/json' },
@@ -61,13 +61,13 @@ export class AuthService {
   }
 
 
-  setUserId(id : string){//**************
+  setUserId(id : string){
     localStorage.setItem('Id', id);
   }
 
   setSession(token: any, expiresTimeHours: number = 8) {
     const date = new Date();
-    date.setHours(date.getHours() + expiresTimeHours);//la hora actual+la cantidad de horas validas del token
+    date.setHours(date.getHours() + expiresTimeHours);
 
     const session: ISession = {
       expiresIn: new Date(date).toISOString(),
@@ -76,7 +76,7 @@ export class AuthService {
 
     this.loggedIn = true;
     localStorage.setItem('session', JSON.stringify(session));
-    //window.location.reload();
+   
   }
 
 
@@ -93,7 +93,7 @@ export class AuthService {
     localStorage.removeItem('session');
     localStorage.removeItem('Id');
     this.loggedIn = false;
-    //window.location.reload();
+
   }
 
 }

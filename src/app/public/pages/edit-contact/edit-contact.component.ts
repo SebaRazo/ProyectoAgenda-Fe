@@ -11,13 +11,18 @@ import { ContactsComponent } from '../contacts/contacts.component';
 })
 export class EditContactComponent implements OnInit {
 
+  id: number | undefined
 
   constructor(private contactService: ContactService, private router: Router, private route: ActivatedRoute ) { }
 
 
 
   ngOnInit(): void {
-
+    this.route.params.subscribe(params => {
+      console.log(params)
+      this.id = params['id'];
+      this.contactService.getContactDetails(this.id!).then(r => this.contact = r);
+    })
   }
 
 
@@ -33,6 +38,7 @@ export class EditContactComponent implements OnInit {
   
 
   async updateContact(editForm : NgForm): Promise<void> {
+
     if (editForm.errors !== null) return
     const res  = await this.contactService.editContact(editForm.value)
     this.router.navigate(["/contacts"]);

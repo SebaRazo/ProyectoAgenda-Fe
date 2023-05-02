@@ -18,7 +18,7 @@ export class ContactsComponent implements OnInit {
 
   constructor(private cs:ContactService, private router:Router, private auth: AuthService) { }
 
-  idContactoForEdit: number = 0
+ 
   ngOnInit(): void {this.getData();
   }
 
@@ -31,9 +31,8 @@ export class ContactsComponent implements OnInit {
   }
 
 
-  async deleteContacto(id: number): Promise<void>{ //se ejecuta desde la contact card
-    await this.cs.deleteContact(id);
-  }
+  async deleteContacto(id: number): Promise<void>{await this.cs.deleteContact(id); }
+  async editContact(contact): Promise<void>{await this.cs.editContact(contact.id);}
 
 
 

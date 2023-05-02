@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ContactJsonPlaceholder } from 'src/app/core/interfaces/contacts';
 import { ContactService } from 'src/app/core/services/contac.service';
-import { ListaNegraComponent } from '../../pages/lista-negra/lista-negra.component';
+
 
 @Component({
   selector:'app-ct-black',
@@ -12,7 +12,7 @@ export class CtBlackComponent implements OnInit {
   emergente:boolean = false;
   contactsData:ContactJsonPlaceholder[] = [];
 
-  constructor(private cs:ContactService, private ln :ListaNegraComponent) { }
+  constructor(private cs:ContactService) { }
 
   @Input() contact:ContactJsonPlaceholder = {
     id:0,
@@ -29,13 +29,13 @@ export class CtBlackComponent implements OnInit {
     
   }
 
-  deleteContacto(id:number){  //metodo llamado desde el boton borrar del html(recibe el id del contacto )
+  deleteContactBlack(id:number){ 
     console.log("contacto id: ",id," eliminado")
-    this.ln.deleteContacto(id) //ejecuta el metodo deleteContacto() del contact component
+    
     setTimeout(()=>{
-      this.ln.reload();
-    },100);//recarga la ultima agenda, con un retraso de 50mls para asegurarnos q los metodos anteriores hayan terminado
+    ;
+    },100);
   }
-
+//crear una funcion que tome el id para creearlo nuevamente en api/contact
 
 }

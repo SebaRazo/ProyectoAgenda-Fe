@@ -31,7 +31,7 @@ form{
     display: block;
     position: fixed;
     left: 35%;
-    top: 35%;
+    top: 13.4%;
     background: rgba(2, 26, 71, 0.67);
     width: 30%;
     padding: 10px 10px 10px;
@@ -110,6 +110,7 @@ input:focus~.barra::before, textarea:focus~.barra::before{
     left: 0%;
 }
 button{
+    font-family: cursive;
     background: #FC5C7D;
     
     background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);
@@ -123,7 +124,7 @@ button{
     color:#fff; 
     border-radius: 4px;
     font-size: 16px;
-    margin: 10px auto;
+    margin: 20px auto;
     cursor: pointer;
 }
 

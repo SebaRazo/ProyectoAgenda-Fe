@@ -2,10 +2,12 @@
 @use './../../../../assets/styles/buttons.scss';
 
 #contenedorContacts{overflow:scroll;
-  height:90vh;
+  height:89vh;
 }
 
 ::-webkit-scrollbar {display: none;}
+
+div{position: relative;}
 
 header{margin: auto;
   display: flexbox;
@@ -34,7 +36,7 @@ border-color: transparent;
 height: 35px;
 width: 35px;}
 
-body {display: flexbox;
+body {
 
   background: rgb(5,2,68);
   background: linear-gradient(0deg, rgba(5,2,68,0.9668242296918768) 0%, rgba(255,50,0,0.9444152661064426) 100%);
@@ -56,6 +58,7 @@ body {display: flexbox;
   
 
   #wp{
+    color: #0e0500;
     
     height: 35px;
     width: 35px; ;

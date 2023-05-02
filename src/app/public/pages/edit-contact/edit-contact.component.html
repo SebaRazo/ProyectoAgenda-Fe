@@ -3,14 +3,15 @@
       
     <form #editForm="ngForm" (ngSubmit)="editForm.valid && updateContact(editForm)">
         <div class="form">
+            <h1>Editar Contacto</h1>
             <div class="grupo">
-                <input value="{{contact.id}}"type="text" name="id" id="name" required [(ngModel)]="contact.id" #name="ngModel"/><span class="barra"></span>
-                <label class="name" for="name">id contacto</label>
-                
+                <input value="{{contact.id}}" type="number" name="id" id="name" required [(ngModel)]="contact.id" #id="ngModel"><span class="barra"></span>
+                <label class="name" for="id">id</label>
             </div>
+
             <div class="grupo">
-                <input type="text" value="{{contact.id}}" [hidden]="true" name="id" [(ngModel)]="contact.id" #id="ngModel">
-                <input value="{{contact.name}}"type="text" name="name" id="name" required [(ngModel)]="contact.name" #name="ngModel"/><span class="barra"></span>
+                
+                <input value="{{contact.name}}"type="text" name="name" id="name" required [(ngModel)]="contact.name" #name="ngModel"><span class="barra"></span>
                 <label class="name" for="name">Nombre</label>
                 
             </div>
@@ -26,7 +27,7 @@
             <input value="{{contact.telephoneNumber}}" type="number" name="telephoneNumber" id="telephoneNumber" [(ngModel)]="contact.telephoneNumber" #telephoneNumer="ngModel" ><span class="barra"></span>
             <label>Numero de telefono</label>
         </div>
-            <button  type="submit" >Agregar</button>
+            <button  type="submit" >Editar</button>
             <button  [routerLink]="['/contacts']">Cancelar</button>
             
             

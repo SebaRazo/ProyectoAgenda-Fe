@@ -30,10 +30,10 @@ form{
     display: block;
     position: fixed;
     left: 35%;
-    top: 35%;
+    top: 9%;
     background: rgb(1,40,64);
-background: linear-gradient(0deg, rgba(1, 40, 64, 0.384) 0%,
- rgba(0, 0, 0, 0.646) 48%, rgba(184, 104, 0, 0.697) 100%);
+    background: linear-gradient(0deg, rgba(1, 40, 64, 0.384) 0%,
+    rgba(0, 0, 0, 0.646) 48%, rgba(184, 104, 0, 0.697) 100%);
     width: 30%;
     padding: 10px 10px 10px;
     border-radius: 10px;
@@ -47,7 +47,7 @@ background: linear-gradient(0deg, rgba(1, 40, 64, 0.384) 0%,
 
 form .grupo{
     position: relative;
-    margin: 45px;
+    margin: 30px;
 }
 
 input, textarea{
@@ -121,30 +121,22 @@ button{
     color:rgba(251, 248, 248, 0.64);  
     border-radius: 4px;
     font-size: 16px;
-    margin: 10px auto;
+    margin: 20px auto;
     cursor: pointer;
 }
 
-@media screen and (max-width:1100px){
-    form{
-        width: 50%;
-    }
-}
+#registrar{
+    font-family: cursive;
+    background: linear-gradient(to right, #02125e, #c5415bc6);
+    position: relative;
 
-@media screen and (max-width:600px){
-    form{
-        width: 60%;
-    }
-}
-
-@media screen and (max-width:450px){
-    form{
-        width: 80%;
-    }
-}
-
-@media screen and (max-width:300px){
-    form{
-        width: 90%;
-    }
+    display: block;
+    width: 100px;
+    height: 40px;
+    border:none;
+    color:rgba(251, 248, 248, 0.64); 
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px auto;
+    cursor: pointer;
 }

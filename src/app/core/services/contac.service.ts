@@ -22,8 +22,8 @@ export class ContactService {
     return await res.json();
   }
 
-  async getContacts(): Promise<ContactJsonPlaceholder[]> {
-    const data = await fetch(BACKEND_URL+'/api/Contact',{
+  async getContacts(): Promise<Contact[]> {
+    const data = await fetch(BACKEND_URL+'/api/Contact/all',{
       method: 'GET',
       headers: {
         'Content-type': 'application/json',
@@ -33,8 +33,9 @@ export class ContactService {
     return await data.json();
   }
 
-  async editContact(contact:Contact) {
-    const res = await fetch(BACKEND_URL+'/api/Contact/' +contact.id, {
+  async editContact( contact:Contact):Promise<Contact> {
+    console.log(contact);
+    const res = await fetch(BACKEND_URL+'/api/Contact/'+contact.id, {
       method: 'PUT',
       body: JSON.stringify(contact),
       headers: {
@@ -43,7 +44,7 @@ export class ContactService {
       },
       
     });
-    return res.ok;
+    return await res.json();
   }
 
   async addContact(contact: ContactJsonPlaceholder) : Promise<ContactJsonPlaceholder>{ //: Promise<ContactJsonPlaceholder>
