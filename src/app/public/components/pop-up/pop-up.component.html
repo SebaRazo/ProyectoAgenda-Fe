@@ -1,15 +1,29 @@
-<div id = "conteiner">
-    <div id="grupo2">
-    <p id="name" >ID {{contact.id}}</p>
-    <p id="name" >{{contact.name}} </p>
-    <p id="name" >{{contact.description}}</p>
-    <span id="telephoneNumber">{{contact.celularNumber}} {{contact.telephoneNumber}}</span>
+<div id="conteiner">
+  <div id="grupo2">
+    <p id="name">{{ contact.name }}</p>
+    <p id="name">{{ contact.description }}</p>
+    <span id="telephoneNumber"
+      >{{ contact.celularNumber }} {{ contact.telephoneNumber }}</span
+    >
     <div>
-    <a href="https://wa.me/{{contact.celularNumber}}" target="_blank" id = "right"><img id="wp" src="./../../../../assets/icons/whatsapp.png"></a>
-    <a href="tel:{{contact.celularNumber}}" id = "right"><img id="wp" src="./../../../../assets/icons/llamada-telefonica.png"></a>
-    <a href="lista-negra" id = "right"><img id="wp" src="./../../../../assets/icons/bloquear-usuario.png"></a>
-    <a (click)="deleteContacto (contact.id)" id = "right"><img id="wp" src="./../../../../assets/icons/eliminar-usuario.png"></a>
-    
-</div>
+      <a
+        href="https://wa.me/{{ contact.celularNumber }}"
+        target="_blank"
+        id="right"
+        ><img id="wp" src="./../../../../assets/icons/whatsapp.png"
+      /></a>
+      <a href="tel:{{ contact.celularNumber }}" id="right"
+        ><img id="wp" src="./../../../../assets/icons/llamada-telefonica.png"
+      /></a>
+      <a href="lista-negra" id="right"
+        ><img id="wp" src="./../../../../assets/icons/bloquear-usuario.png"
+      /></a>
+      <a (click)="deleteContacto(contact.id)" id="right"
+        ><img id="wp" src="./../../../../assets/icons/eliminar-usuario.png"
+      /></a>
+      <a (click)="navigateToEditContact(contact.id)" id="right">
+        <img id="wp" src="./../../../../assets/icons/edit.png" />
+      </a>
     </div>
+  </div>
 </div>

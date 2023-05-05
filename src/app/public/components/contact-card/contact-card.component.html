@@ -1,18 +1,16 @@
-
-    <div action="" id="conteiner" >
-        
-        
-        <div id="form" >
-            <div id="grupo"><button id= "button-emergente" class="btn btn-primary" (click)="emergente = true" (dblclick)="emergente = false">
-                <p id="name" >{{contact.name}} {{contact.description}}</p>
-                
-                  </button>
-            </div>
-            
-            
-        </div>
-        
+<div action="" id="conteiner">
+  <div id="form">
+    <div id="grupo">
+      <button
+        id="button-emergente"
+        class="btn btn-primary"
+        (click)="emergente = true"
+        (dblclick)="emergente = false"
+      >
+        <p id="name">{{ contact.name }} {{ contact.description }}</p>
+      </button>
     </div>
-  
-    <app-pop-up *ngIf="emergente"     
-    [contact]="contact"></app-pop-up>
+  </div>
+</div>
+
+<app-pop-up *ngIf="emergente" [contact]="contact"></app-pop-up>

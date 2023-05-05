@@ -7,17 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { ContactCardComponent } from '../../components/contact-card/contact-card.component';
 import { PopUpComponent } from '../../components/pop-up/pop-up.component';
 
-
 @NgModule({
-  declarations: [
-    EditContactComponent
-  ],
-  imports: [
-    CommonModule,
-    EditContactRoutingModule,
-    FormsModule,
- 
-    
-  ]
+  declarations: [EditContactComponent],
+  imports: [CommonModule, EditContactRoutingModule, FormsModule],
 })
-export class EditContactModule { }
+export class EditContactModule {}
