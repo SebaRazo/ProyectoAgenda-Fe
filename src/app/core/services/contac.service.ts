@@ -102,20 +102,22 @@ export class ContactService {
     return res.ok;
   }
 
-  async blockContact(id: number): Promise<boolean> {
+  async blockContact(id: number): Promise<void> {
     const res = await fetch(BACKEND_URL + '/api/Contact/block/' + id, {
-      method: 'PUT',
+      method: 'POST',
       headers: {
         'Content-type': 'application/json',
         Authorization: `Bearer ${this.auth.getSession().token!}`,
       },
     });
-    return res.ok;
+    if (!res.ok) {
+      // Manejar el error
+    }
   }
 
   async unblockContact(id: number): Promise<boolean> {
     const res = await fetch(BACKEND_URL + '/api/Contact/unblock/' + id, {
-      method: 'PUT',
+      method: 'POST',
       headers: {
         'Content-type': 'application/json',
         Authorization: `Bearer ${this.auth.getSession().token!}`,

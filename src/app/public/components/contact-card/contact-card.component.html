@@ -13,4 +13,8 @@
   </div>
 </div>
 
-<app-pop-up *ngIf="emergente" [contact]="contact"></app-pop-up>
+<app-pop-up
+  *ngIf="emergente"
+  [contact]="contact"
+  [contactId]="contact.id"
+></app-pop-up>

@@ -1,21 +1,18 @@
-import { Component, Inject, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ContactService } from 'src/app/core/services/contac.service';
 import { ActivatedRoute } from '@angular/router';
-import {
-  Contact,
-  ContactJsonPlaceholder,
-} from 'src/app/core/interfaces/contacts';
-import { ContactCardComponent } from 'src/app/public/components/contact-card/contact-card.component';
+import { ContactJsonPlaceholder } from 'src/app/core/interfaces/contacts';
 import { AuthService } from 'src/app/core/services/auth.service';
-import { ContactsComponent } from '../../pages/contacts/contacts.component';
 import { Router } from '@angular/router';
+import { ContactsComponent } from '../../pages/contacts/contacts.component';
+
 @Component({
   selector: 'app-pop-up',
   templateUrl: './pop-up.component.html',
   styleUrls: ['./pop-up.component.scss'],
 })
 export class PopUpComponent implements OnInit {
-  emergente: boolean = false;
+  @Input() contactId: number;
 
   constructor(
     private cs: ContactService,
@@ -35,9 +32,15 @@ export class PopUpComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  deleteContacto(id: number) {
-    console.log('contacto id: ', id, ' eliminado');
-    this.cc.deleteContacto(id);
+  deleteContacto(): void {
+    this.cs
+      .deleteContact(this.contact.id)
+      .then(() => {
+        console.log('Contacto eliminado con éxito');
+      })
+      .catch((error) => {
+        console.log('Error al eliminar el contacto:', error);
+      });
     setTimeout(() => {
       this.cc.reload();
     }, 100);
@@ -48,5 +51,19 @@ export class PopUpComponent implements OnInit {
   }
   navigateToEditContact(id: number): void {
     this.router.navigate(['/edit-contact', id]);
+  }
+
+  blockContact(): void {
+    this.cs
+      .blockContact(this.contact.id)
+      .then(() => {
+        console.log('Contacto bloqueado con éxito');
+      })
+      .catch((error) => {
+        console.log('Error al bloquear el contacto:', error);
+      });
+    setTimeout(() => {
+      this.cc.reload();
+    }, 100);
   }
 }

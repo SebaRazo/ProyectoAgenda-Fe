@@ -15,10 +15,10 @@
       <a href="tel:{{ contact.celularNumber }}" id="right"
         ><img id="wp" src="./../../../../assets/icons/llamada-telefonica.png"
       /></a>
-      <a href="lista-negra" id="right"
+      <a (click)="blockContact()" id="right"
         ><img id="wp" src="./../../../../assets/icons/bloquear-usuario.png"
       /></a>
-      <a (click)="deleteContacto(contact.id)" id="right"
+      <a (click)="deleteContacto()" id="right"
         ><img id="wp" src="./../../../../assets/icons/eliminar-usuario.png"
       /></a>
       <a (click)="navigateToEditContact(contact.id)" id="right">
