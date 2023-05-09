@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ContactJsonPlaceholder } from 'src/app/core/interfaces/contacts';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { Router } from '@angular/router';
-import { ContactsComponent } from '../../pages/contacts/contacts.component';
+import { ContactsComponent } from '../contacts/contacts.component';
 
 @Component({
   selector: 'app-pop-up',
