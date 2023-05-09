@@ -44,19 +44,11 @@ const routes: Routes = [
   },
 
   {
-    path: 'lista-negra',
-    loadChildren: () =>
-      import('./public/pages/lista-negra/lista-negra.module').then(
-        (m) => m.ListaNegraModule
-      ),
-  },
-
-  {
-    path: 'registro-de-llamadas',
+    path: 'Contactos-bloqueados',
     loadChildren: () =>
       import(
-        './public/pages/registro-de-llamadas/registro-de-llamadas.module'
-      ).then((m) => m.RegistroDeLlamadasModule),
+        './public/pages/contacts-blocked/contacts-blocked-routing.module'
+      ).then((m) => m.ContactsBlockedRoutingModule),
   },
 ];
 
