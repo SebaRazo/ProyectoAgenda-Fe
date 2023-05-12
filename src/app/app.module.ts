@@ -5,10 +5,11 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactsBlockedComponent } from './public/pages/contacts-blocked/contacts-blocked.component';
 import { ContactsBlockedModule } from './public/pages/contacts-blocked/contacts-blocked.module';
-
+import { BlockedCardComponent } from './public/components/blocked-card/blocked-card.component';
+import { CommonModule } from '@angular/common';
 @NgModule({
-  declarations: [AppComponent, ContactsBlockedComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, ContactsBlockedModule],
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
 
   providers: [],
   bootstrap: [AppComponent],

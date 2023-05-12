@@ -1,15 +1,11 @@
+<div id="conteiner">
+  <div id="grupo2">
+    <p id="name">{{ contact.name }} {{ contact.description }}</p>
+    <a (click)="unblockContact()" id="right">
+      <img id="wp" src="./../../../../assets/icons/mas.png" />
+    </a>
 
-    <div action="" id="conteiner" >
-        
-        
-        <div id="form" >
-            <div id="grupo"><button id= "button-emergente" class="btn btn-primary"  (dblclick)="deleteContactBlack(contact.id)">
-                <p id="name" >{{contact.name}} {{contact.description}}</p>
-                
-                  </button>
-            </div>
-            
-            
-        </div>
-        
-    </div>
+    <p id="name">ToTal de llamadas: {{ callInfo?.countCall }}</p>
+    <p id="name">Utima llamada recibida: {{ callInfo?.timeCall }}</p>
+  </div>
+</div>

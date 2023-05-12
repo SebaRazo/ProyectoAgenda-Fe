@@ -1,41 +1,45 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ContactJsonPlaceholder } from 'src/app/core/interfaces/contacts';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {
+  CallInfoDto,
+  ContactJsonPlaceholder,
+} from 'src/app/core/interfaces/contacts';
 import { ContactService } from 'src/app/core/services/contac.service';
-
+import { ContactsBlockedComponent } from '../../pages/contacts-blocked/contacts-blocked.component';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector:'app-ct-black',
+  selector: 'app-ct-black',
   templateUrl: './ct-black.component.html',
-  styleUrls: ['./ct-black.component.scss']
+  styleUrls: ['./ct-black.component.scss'],
 })
 export class CtBlackComponent implements OnInit {
-  emergente:boolean = false;
-  contactsData:ContactJsonPlaceholder[] = [];
-
-  constructor(private cs:ContactService) { }
-
-  @Input() contact:ContactJsonPlaceholder = {
-    id:0,
-    name:'',
-    celularNumber:0,
-    description:'',
-    telephoneNumber:0,
-
-
+  @Input() contact: ContactJsonPlaceholder = {
+    id: 0,
+    name: '',
+    celularNumber: 0,
+    description: '',
+    telephoneNumber: 0,
   };
-  
+  @Output() close = new EventEmitter<void>();
+  callInfo: CallInfoDto | null = null;
 
+  constructor(private cs: ContactService) {}
   ngOnInit(): void {
-    
+    this.cs.getCallInfoByContactId(this.contact.id).then((callInfo) => {
+      this.callInfo = callInfo;
+    });
   }
 
-  deleteContactBlack(id:number){ 
-    console.log("contacto id: ",id," eliminado")
-    
-    setTimeout(()=>{
-    ;
-    },100);
+  unblockContact(): void {
+    this.cs
+      .unblockContact(this.contact.id)
+      .then(() => {
+        console.log('Contacto desbloqueado con éxito');
+        this.close.emit();
+      })
+      .catch((error) => {
+        console.log('Error al desbloquear el contacto:', error);
+      });
   }
-//crear una funcion que tome el id para creearlo nuevamente en api/contact
-
 }

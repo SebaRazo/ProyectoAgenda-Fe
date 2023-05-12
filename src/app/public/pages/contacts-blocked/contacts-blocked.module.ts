@@ -2,16 +2,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ContactsBlockedRoutingModule } from './contacts-blocked-routing.module';
-import { RouterModule, Routes } from '@angular/router';
 import { ContactsBlockedComponent } from './contacts-blocked.component';
-const routes: Routes = [{ path: '', component: ContactsBlockedComponent }];
+import { CtBlackComponent } from '../../components/ct-black/ct-black.component';
+import { BlockedCardComponent } from '../../components/blocked-card/blocked-card.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [],
-  imports: [
-    RouterModule.forChild(routes),
-    CommonModule,
-    ContactsBlockedRoutingModule,
+  declarations: [
+    ContactsBlockedComponent,
+    CtBlackComponent,
+    BlockedCardComponent,
   ],
+  imports: [CommonModule, ContactsBlockedRoutingModule, FormsModule], // Incluye CommonModule aquí
 })
 export class ContactsBlockedModule {}

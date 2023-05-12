@@ -1,0 +1,86 @@
+body {
+  background: -webkit-linear-gradient(to right, #6a82fb, #fc5c7d);
+  background: linear-gradient(to right, #6a82fb, #fc5c7d);
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#name {
+  font-family: monospace;
+  color: #fff8f8cf;
+  text-align: center;
+  margin: 10px 0;
+  font-weight: 800;
+  font-size: 30px;
+}
+
+#conteiner {
+  margin: auto;
+  display: flexbox;
+  position: relative;
+  text-align: center;
+  justify-content: space-between;
+  transition: 40ms ease-in-out;
+  cursor: pointer;
+  width: 29%;
+  border-radius: 30px;
+  box-shadow: 0 0 6px 0 rgb(0, 0, 0);
+}
+
+#telephoneNumber {
+  font-family: monospace;
+
+  background: none;
+  color: #fefbfbeb;
+  font-size: 30px;
+  padding: 1px 1px 1px 50px;
+}
+#bto {
+  text-align: center;
+  height: 20px;
+}
+#right {
+  top: 500px;
+  #wp {
+    height: 60px;
+  }
+}
+
+#button-emergente {
+  position: relative;
+  text-align: center;
+  background-image: linear-gradient(rgba(1, 1, 56, 0.5), rgba(255, 8, 0, 0.5)),
+    url("./../../../../assets/imagen/contac.jpg");
+  justify-content: space-between;
+  transition: 40ms ease-in-out;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 30px;
+  box-shadow: 0 0 6px 0 rgb(0, 0, 0);
+}
+@media screen and (max-width: 1100px) {
+  #conteiner {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #conteiner {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  f#conteiner {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  #conteiner {
+    width: 90%;
+  }
+}

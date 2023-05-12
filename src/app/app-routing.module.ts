@@ -46,9 +46,9 @@ const routes: Routes = [
   {
     path: 'Contactos-bloqueados',
     loadChildren: () =>
-      import(
-        './public/pages/contacts-blocked/contacts-blocked-routing.module'
-      ).then((m) => m.ContactsBlockedRoutingModule),
+      import('./public/pages/contacts-blocked/contacts-blocked.module').then(
+        (m) => m.ContactsBlockedModule
+      ),
   },
 ];
 

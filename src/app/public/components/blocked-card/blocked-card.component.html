@@ -1,0 +1,20 @@
+<div action="" id="conteiner">
+  <div id="form">
+    <div id="grupo">
+      <button
+        id="button-emergente"
+        class="btn btn-primary"
+        (click)="emergente = true"
+        (dblclick)="emergente = false"
+      >
+        <p id="name">{{ contact.name }} {{ contact.description }}</p>
+      </button>
+    </div>
+  </div>
+</div>
+
+<app-ct-black
+  *ngIf="emergente"
+  [contact]="contact"
+  (close)="emergente = false"
+></app-ct-black>

@@ -10,6 +10,10 @@
   <header>
     <a [routerLink]="['/contacts']" id="right"
       ><img id="wp" src="./../../../../assets/icons/anterior.png" /></a
-    >Registro de llamadas
+    >Lista Negra
   </header>
+  <main id="container">
+    <app-blocked-card *ngFor="let contact of contactsData" [contact]="contact">
+    </app-blocked-card>
+  </main>
 </body>
