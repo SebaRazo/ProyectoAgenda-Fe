@@ -24,7 +24,10 @@ export class CtBlackComponent implements OnInit {
   @Output() close = new EventEmitter<void>();
   callInfo: CallInfoDto | null = null;
 
-  constructor(private cs: ContactService) {}
+  constructor(
+    private cs: ContactService,
+    private cb: ContactsBlockedComponent
+  ) {}
   ngOnInit(): void {
     this.cs.getCallInfoByContactId(this.contact.id).then((callInfo) => {
       this.callInfo = callInfo;
@@ -41,5 +44,8 @@ export class CtBlackComponent implements OnInit {
       .catch((error) => {
         console.log('Error al desbloquear el contacto:', error);
       });
+    setTimeout(() => {
+      this.cb.reload();
+    }, 100);
   }
 }
