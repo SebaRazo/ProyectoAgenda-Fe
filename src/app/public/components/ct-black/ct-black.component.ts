@@ -5,8 +5,6 @@ import {
 } from 'src/app/core/interfaces/contacts';
 import { ContactService } from 'src/app/core/services/contac.service';
 import { ContactsBlockedComponent } from '../../pages/contacts-blocked/contacts-blocked.component';
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-ct-black',

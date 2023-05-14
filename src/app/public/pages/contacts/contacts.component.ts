@@ -1,11 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  Contact,
-  ContactJsonPlaceholder,
-} from 'src/app/core/interfaces/contacts';
+import { ContactJsonPlaceholder } from 'src/app/core/interfaces/contacts';
 import { ContactService } from 'src/app/core/services/contac.service';
-import { NgModule } from '@angular/core';
-import { ContactCardComponent } from '../../components/contact-card/contact-card.component';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { Router } from '@angular/router';
 @Component({

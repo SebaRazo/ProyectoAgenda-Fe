@@ -1,12 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import {
-  Contact,
-  ContactJsonPlaceholder,
-} from 'src/app/core/interfaces/contacts';
+import { ContactJsonPlaceholder } from 'src/app/core/interfaces/contacts';
 import { ContactService } from 'src/app/core/services/contac.service';
-import { ContactsComponent } from '../contacts/contacts.component';
 
 @Component({
   templateUrl: './edit-contact.component.html',
@@ -33,9 +29,9 @@ export class EditContactComponent implements OnInit {
   contact: ContactJsonPlaceholder = {
     id: 0,
     name: '',
-    celularNumber: 0,
+    celularNumber: null,
     description: '',
-    telephoneNumber: 0,
+    telephoneNumber: null,
   };
 
   // src/app/public/pages/edit-contact/edit-contact.component.ts

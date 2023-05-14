@@ -22,7 +22,7 @@ export class ContactService {
       },
     });
     const contact = await res.json();
-    console.log('Contact in getContactDetails:', contact); // Agrega este registro de consola
+    console.log('Contact in getContactDetails:', contact);
     return contact;
   }
 
@@ -59,8 +59,6 @@ export class ContactService {
     return await res.json();
   }
 
-  // src/app/core/services/contact.service.ts
-
   async editContact(id: number, contact: Partial<Contact>): Promise<Contact> {
     console.log('Contact in editContact:', contact);
     const res = await fetch(BACKEND_URL + '/api/Contact/' + id, {
@@ -77,7 +75,6 @@ export class ContactService {
   async addContact(
     contact: ContactJsonPlaceholder
   ): Promise<ContactJsonPlaceholder> {
-    //: Promise<ContactJsonPlaceholder>
     console.log(contact);
     const res = await fetch(BACKEND_URL + '/api/Contact', {
       method: 'POST',
@@ -88,7 +85,6 @@ export class ContactService {
       body: JSON.stringify(contact),
     });
     return await res.json();
-    //console.log(res.json())
   }
 
   async deleteContact(id: number): Promise<boolean> {

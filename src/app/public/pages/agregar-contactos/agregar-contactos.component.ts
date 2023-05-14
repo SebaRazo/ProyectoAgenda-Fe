@@ -1,10 +1,7 @@
 import { Component, EventEmitter, Input, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import {
-  Contact,
-  ContactJsonPlaceholder,
-} from 'src/app/core/interfaces/contacts';
+import { ContactJsonPlaceholder } from 'src/app/core/interfaces/contacts';
 import { ContactService } from 'src/app/core/services/contac.service';
 
 @Component({
