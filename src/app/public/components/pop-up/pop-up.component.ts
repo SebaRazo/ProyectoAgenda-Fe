@@ -43,7 +43,7 @@ export class PopUpComponent implements OnInit {
       });
     setTimeout(() => {
       this.cc.reload();
-    }, 10);
+    }, 110);
   }
 
   editContac(id: number) {

@@ -1,22 +1,39 @@
-<body>  
-    <video src="./../../../../assets/videos/mar-atardecer.mp4"  type="video/mp4" playsinline loop autoplay [muted]="true">
-    </video> 
-    <form (ngSubmit)="login(form)" #form="ngForm">
-        <div class="form">
-            <h1>Agenda de Contactos</h1>
-            <div class="grupo">
-                <input type="text" name="userName" id="" [(ngModel)]="authData.userName" #userName="ngModel"><span class="barra"></span>
-                <label>Nombre de usuario:</label>
-            </div>
-            <div class="grupo">
-                <input type="password" name="password" id="" [(ngModel)]="authData.password" #password="ngModel"
-                ><span class="barra"></span>
-                <label>Password:</label>
-            <button type="submit" id ="login">Login</button>
-            <button type="button" id ="registrar" [routerLink]="['registro']">registrar</button>
-        </div>
+<body>
+  <video
+    src="./../../../../assets/videos/mar-atardecer.mp4"
+    type="video/mp4"
+    playsinline
+    loop
+    autoplay
+    [muted]="true"
+  ></video>
+  <form (ngSubmit)="login(form)" #form="ngForm">
+    <div class="form">
+      <h1>Agenda de Contactos</h1>
+      <div class="grupo">
+        <input
+          type="text"
+          name="userName"
+          id=""
+          [(ngModel)]="authData.userName"
+          #userName="ngModel"
+        /><span class="barra"></span>
+        <label>Nombre de usuario:</label>
       </div>
-    </form>  
-    
-  </body>
-  
+      <div class="grupo">
+        <input
+          type="password"
+          name="password"
+          id=""
+          [(ngModel)]="authData.password"
+          #password="ngModel"
+        /><span class="barra"></span>
+        <label>Password:</label>
+        <button type="submit" id="login">Acceso</button>
+        <button type="button" id="registrar" [routerLink]="['registro']">
+          Registrar
+        </button>
+      </div>
+    </div>
+  </form>
+</body>

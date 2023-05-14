@@ -1,32 +1,76 @@
 <body>
-    <video src="./../../../../assets/videos/registro.mp4" type="video/mp4" playsinline loop autoplay [muted]="true"></video>
-    <form #registerForm="ngForm" (ngSubmit)="registerForm.form.valid && register(registerForm)">      
-        <div class="form">
-            <h1>Registro de Agenda</h1>
-            
-            <div class="grupo">
-                <input type="text" name="name" id="" required [(ngModel)]="user.name" #name="ngModel"><span class="barra"></span>
-                <label>Nombre:</label>
-            </div>
-            <div class="grupo">
-                <input type="text" name="lastName" id="" required [(ngModel)]="user.lastName" #lastName="ngModel"><span class="barra"></span>
-                <label>Apellido:</label>
-            </div>
-            <div class="grupo">
-                <input type="text" name="password" id="" required [(ngModel)]="user.password" #password="ngModel"><span class="barra"></span>
-                <label>Contraseña:</label>
-            </div>
-            <div class="grupo">
-                <input type="text" name="email" id="" required [(ngModel)]="user.email" #email="ngModel"><span class="barra"></span>
-                <label>Correo:</label>
-            </div>
-            <div class="grupo">
-                <input type="text" name="userName" id=""  required [(ngModel)]="user.userName" #userName="ngModel"><span class="barra"></span>
-                <label>Nombre de usuario:</label>
-            <button type="submit">registro</button>
-            <button  [routerLink]="['/']">Volver</button>
-        </div> 
+  <video
+    src="./../../../../assets/videos/registro.mp4"
+    type="video/mp4"
+    playsinline
+    loop
+    autoplay
+    [muted]="true"
+  ></video>
+  <form
+    #registerForm="ngForm"
+    (ngSubmit)="registerForm.form.valid && register(registerForm)"
+  >
+    <div class="form">
+      <h1>Registro de Usuario</h1>
+
+      <div class="grupo">
+        <input
+          type="text"
+          name="name"
+          id=""
+          required
+          [(ngModel)]="user.name"
+          #name="ngModel"
+        /><span class="barra"></span>
+        <label>Nombre:</label>
       </div>
-    </form>
-    
-  </body>
+      <div class="grupo">
+        <input
+          type="text"
+          name="lastName"
+          id=""
+          required
+          [(ngModel)]="user.lastName"
+          #lastName="ngModel"
+        /><span class="barra"></span>
+        <label>Apellido:</label>
+      </div>
+      <div class="grupo">
+        <input
+          type="text"
+          name="password"
+          id=""
+          required
+          [(ngModel)]="user.password"
+          #password="ngModel"
+        /><span class="barra"></span>
+        <label>Contraseña:</label>
+      </div>
+      <div class="grupo">
+        <input
+          type="text"
+          name="email"
+          id=""
+          required
+          [(ngModel)]="user.email"
+          #email="ngModel"
+        /><span class="barra"></span>
+        <label>Correo:</label>
+      </div>
+      <div class="grupo">
+        <input
+          type="text"
+          name="userName"
+          id=""
+          required
+          [(ngModel)]="user.userName"
+          #userName="ngModel"
+        /><span class="barra"></span>
+        <label>Nombre de usuario:</label>
+        <button type="submit">Registro</button>
+        <button [routerLink]="['/']">Volver</button>
+      </div>
+    </div>
+  </form>
+</body>
