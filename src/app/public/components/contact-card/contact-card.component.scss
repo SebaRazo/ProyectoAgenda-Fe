@@ -1,27 +1,23 @@
-
-
-
 body {
-  background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);
-  background: linear-gradient(to right, #6A82FB, #FC5C7D);
-  font-family: 'Poppins', sans-serif;
+  background: -webkit-linear-gradient(to right, #6a82fb59, #fc5c7c4c);
+  background: linear-gradient(to right, #6a82fb59, #fc5c7c62);
+  font-family: "Poppins", sans-serif;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
-#name{
+#name {
   font-family: monospace;
-  color:#fff8f8cf;
+  color: #fff8f8cf;
   text-align: center;
   margin: 10px 0;
   font-weight: 800;
   font-size: 30px;
 }
 
-#conteiner{
+#conteiner {
   margin: auto;
   display: flexbox;
   position: relative;
@@ -34,52 +30,54 @@ body {
   box-shadow: 0 0 6px 0 rgb(0, 0, 0);
 }
 
-
-#telephoneNumber{
+#telephoneNumber {
   font-family: monospace;
 
   background: none;
-  color:#fefbfbeb;
+  color: #fefbfbeb;
   font-size: 30px;
   padding: 1px 1px 1px 50px;
- 
 }
-#bto{ text-align: center;
+#bto {
+  text-align: center;
   height: 20px;
-} 
+}
 
-#button-emergente{
+#button-emergente {
   position: relative;
   text-align: center;
-  background-image: linear-gradient(rgba(1, 1, 56, 0.5), rgba(255, 8, 0, 0.5)),url("./../../../../assets/imagen/contac.jpg");
+  background-image: linear-gradient(
+      rgba(1, 1, 56, 0.339),
+      rgba(255, 8, 0, 0.321)
+    ),
+    url("./../../../../assets/imagen/contac.jpg");
   justify-content: space-between;
   transition: 40ms ease-in-out;
   cursor: pointer;
   width: 100%;
   border-radius: 30px;
   box-shadow: 0 0 6px 0 rgb(0, 0, 0);
-  
 }
-@media screen and (max-width:1100px){
-  #conteiner{
-      width: 50%;
+@media screen and (max-width: 1100px) {
+  #conteiner {
+    width: 50%;
   }
 }
 
-@media screen and (max-width:600px){
-  #conteiner{
-      width: 60%;
+@media screen and (max-width: 600px) {
+  #conteiner {
+    width: 60%;
   }
 }
 
-@media screen and (max-width:450px){
-  f#conteiner{
-      width: 80%;
+@media screen and (max-width: 450px) {
+  f#conteiner {
+    width: 80%;
   }
 }
 
-@media screen and (max-width:300px){
-  #conteiner{
-      width: 90%;
+@media screen and (max-width: 300px) {
+  #conteiner {
+    width: 90%;
   }
 }

@@ -1,8 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ContactJsonPlaceholder } from 'src/app/core/interfaces/contacts';
 import { ContactService } from 'src/app/core/services/contac.service';
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-blocked-card',

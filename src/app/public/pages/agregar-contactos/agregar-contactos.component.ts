@@ -21,15 +21,11 @@ export class AgregarContactosComponent implements OnInit {
 
   contactsData: ContactJsonPlaceholder = {
     name: '',
-    celularNumber: 0,
+    celularNumber: null,
     description: '',
-    telephoneNumber: 0,
+    telephoneNumber: null,
   };
-  ngOnInit(): void {
-    this.ar.params.subscribe((params) => {
-      const sub: any = params['id'] || null;
-    });
-  }
+  ngOnInit(): void {}
 
   async AgregContactos(createForm: NgForm) {
     console.log(createForm.value);

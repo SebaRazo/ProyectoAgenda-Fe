@@ -26,11 +26,11 @@
   text-align: center;
   justify-content: space-between;
   background-image: linear-gradient(
-      rgba(0, 0, 0, 0.721),
-      rgba(255, 8, 0, 0.716)
+      rgba(87, 5, 80, 0.445),
+      rgba(41, 1, 27, 0.815)
     ),
-    url("./../../../../assets/imagen/contac.jpg");
-  border-radius: 3%;
+    url("./../../../../assets/imagen/panalListanegra.jpg");
+  border-radius: 5%;
 
   bottom: -20%;
   width: 29%;
@@ -43,6 +43,7 @@
 }
 
 #right {
+  cursor: pointer;
   top: 500px;
   #wp {
     height: 60px;

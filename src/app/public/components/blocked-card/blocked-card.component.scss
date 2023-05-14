@@ -52,8 +52,11 @@ body {
 #button-emergente {
   position: relative;
   text-align: center;
-  background-image: linear-gradient(rgba(1, 1, 56, 0.5), rgba(255, 8, 0, 0.5)),
-    url("./../../../../assets/imagen/contac.jpg");
+  background-image: linear-gradient(
+      rgba(1, 1, 56, 0.331),
+      rgba(255, 0, 212, 0.198)
+    ),
+    url("./../../../../assets/imagen/panalListanegra.jpg");
   justify-content: space-between;
   transition: 40ms ease-in-out;
   cursor: pointer;
