@@ -5,17 +5,17 @@ import { LoggedUserGuard } from './core/guards/logged-user.guard';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: ()=> import('./public/pages/login/login.module').then(m => m.LoginModule),
+    loadChildren: ()=> import('./public/pages/contacts/contacts.module').then(m => m.ContactsModule),
   
   },
   {
-    path: 'contacs',
+    path: 'menu',
     loadChildren: ()=> import('./public/pages/contacts/contacts.module').then(m => m.ContactsModule),
     canActivate: [LoggedUserGuard]
   },
   {
 
-    path: 'agregarContactos',
+    path: 'zonaEntrega',
     loadChildren: ()=> import('./public/pages/agregar-contactos/agregar-contactos.module').then(m => m.AgregarContactosModule)
   },
   { path: 'registro', loadChildren: () => import('./public/pages/registro/registro.module').then(m => m.RegistroModule) },

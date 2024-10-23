@@ -1,13 +1,41 @@
+<body>
 
-  
-<header>Lista de contactos <a href="agregarContactos" id = "right"><img id="wp" src="./../../../../assets/icons/agregar-usuario.png"></a>
-  <a href="registro-de-llamadas" id = "right"><img id="wp" src="./../../../../assets/icons/registro-de-llamadas.png"></a>
-  <a href="lista-negra" id = "right"><img id="wp" src="./../../../../assets/icons/lista-negra.png"></a>
+<header> <a href="menu" id = "right"><img id="wp" src="./../../../../assets/icons/logo.png"></a> La Nona Pola  comidas caseras & viandas  
+
 </header>
+<div id = "menus"><button id="rutas" [routerLink]="['/menu']">Inicio</button><button id="rutas" [routerLink]="['/zonaEntrega']">Zona de entrega</button><button id="rutas">Contacto</button><button id="rutas">Registro</button></div>
+
 <main id="container">
+
+<div id="contenedorContacts">
   <app-contact-card
-    *ngFor="let contact of contactsData"
-    [contact]="contact"
-    >
-  </app-contact-card>
+  *ngFor="let contact of contactsData"
+  [contact]="contact"
+  (productoSeleccionado)="actualizarFactura($event)"
+  >
+</app-contact-card>
+</div >
+<div id="contenedorbotones">
+  <!-- Factura -->
+  <div id="pedido"><strong>Mi pedido</strong>
+
+  </div>
+  <div *ngFor="let item of factura">
+    <div id="padig"><strong>Producto:  </strong>{{ item.name }}
+    <div id="padig"><strong>Unidades: </strong>{{ item.cantidad }}   <strong>  Subtotal:  </strong> ${{ item.subtotal }}</div>
+  
+    </div>
+    
+   
+  </div>
+  <!-- Total -->
+  <div>
+    <strong>Total:  ${{ total }}</strong>
+  </div>
+  <button id = "botonpedidof" (click)="confirmarPedido()">Confirmar pedido</button>
+  <button id = "botonpedidoc" (click)="cancelarPedido()">Cancelar pedido</button>
+</div>
+
+
 </main>
+</body>

@@ -1,20 +1,29 @@
 
-<body>
-    <div action="" id="conteiner">
-        <div id="form">
-            <div id="grupo">
-                <p id="name" [routerLink]="['contacts',contact.id]">{{contact.username}} {{contact.company?.name}}</p>
-                <span id="telephoneNumber">{{contact.phone}}</span>
+<div action="" id="conteiner" >
+        
+        
+    <div id="form" >
+        <div id="grupo"><button id= "button-emergente" class="btn btn-primary" (click)="agregarProducto()">
+            <div id = "encabezado">
+                <p id="name" [routerLink]="['contacts',contact.id]"> {{contact.name}}</p>
             </div>
-            <div id="grupo2">
-                <a href="https://wa.me/{{contact.phone}}" target="_blank" id = "right"><img id="wp" src="./../../../../assets/icons/whatsapp.png"></a>
-                <a href="tel:{{contact.phone}}" id = "right"><img id="wp" src="./../../../../assets/icons/llamada-telefonica.png"></a>
-                <a href="lista-negra" id = "right"><img id="wp" src="./../../../../assets/icons/bloquear-usuario.png"></a>
-                <a href="." id = "right"><img id="wp" src="./../../../../assets/icons/eliminar-usuario.png"></a>
-                <a href="." id = "right"><img id="wp" src="./../../../../assets/icons/edit.png"></a>
+            <div id="contFoto"><img id="fotocomida" [src]="contact.imagen" alt="{{contact.name}}">
             </div>
+            <div id="descripcionfoto"><p id="name" [routerLink]="['contacts',contact.id]"> {{contact.descripcion}}</p>
+            <div id ="precioycantidad"><p id="name" [routerLink]="['contacts',contact.id]"> ${{contact.precio}}   agregados: {{contact.cantidad}}</p></div></div>
+                
+            
+            
+
+
+
+            
+              </button>
         </div>
+        
         
     </div>
     
-  </body>
+</div>
+
+

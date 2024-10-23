@@ -6,9 +6,12 @@ import { ContactsComponent } from './contacts.component';
 import { ContactCardComponent } from '../../components/contact-card/contact-card.component';
 
 
+
 @NgModule({
   declarations: [
     ContactsComponent,
+    
+
     ContactCardComponent
   ],
   imports: [

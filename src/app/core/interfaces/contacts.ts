@@ -1,43 +1,31 @@
 export interface Contact {
-    firstName: string,
-    lastName: string,
-    phoneNumber: string,
+    id: number;
+    name: string,
+    descripcion?: string,
+    imagen?: string,
+    precio: number,
+    cantidad: number,
+
+   
 }
 
-export const defaultContact:Contact = {
-    firstName: "First name",
-    lastName: "Last Name",
-    phoneNumber: "+5412345678"
-}
+export interface defaultContact{
 
+    name: "testep",
+    descripcion?: "tesd",
 
+    precio?: 1516,
+    cantidad: 0,
 
-export interface Geo {
-    lat: string;
-    lng: string;
-}
-
-export interface Address {
-    street: string;
-    suite: string;
-    city: string;
-    zipcode: string;
-    geo: Geo;
-}
-
-export interface Company {
-    name: string;
-    catchPhrase: string;
-    bs: string;
 }
 
 export interface ContactJsonPlaceholder {
-    id?: number;
-    name?: string;
-    username?: string;
-    email?: string;
-    address?: Address;
-    phone?: string;
-    website?: string;
-    company?: Company;
+    id: number;
+    name: string,
+    descripcion?: string,
+    imagen?: string,
+    precio: number,
+    cantidad: number,
+
+
 }
